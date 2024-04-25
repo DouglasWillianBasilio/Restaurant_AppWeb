@@ -140,3 +140,83 @@ html {
     font-size: 10px;
     scroll-behavior: smooth;
 }
+
+body {
+    background-color: var(--white);
+    color: var(--sonic-silver);
+    font-size: 1.6rem;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+body.active {
+    overflow: hidden;
+}
+
+:focus-visible {
+    outline-offset: 4px;
+}
+
+::selection {
+    background-color: var(--deep-saffron);
+    color: var(--white);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--cultured);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--deep-saffron);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--tangerine);
+}
+
+/*-----------------------------------*\
+  #HEADER
+\*-----------------------------------*/
+
+/* .navbar, */
+.header-btn-group .btn {
+    display: none;
+}
+
+.header {
+    --color: var(--white);
+    --btn-color: var(--champagne-pink);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-block: 20px;
+    border-block-end: 1px solid var(--champagne-pink_20);
+    z-index: 4;
+}
+
+.header.active {
+    --color: var(--rich-black-fogra-29);
+    --btn-color: var(--rich-black-fogra-29);
+
+    position: fixed;
+    top: -86px;
+    background-color: var(--white);
+    box-shadow: var(--shadow-1);
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
