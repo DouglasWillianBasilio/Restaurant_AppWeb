@@ -147,6 +147,7 @@ body {
     font-size: 1.6rem;
     line-height: 1.6;
     overflow-x: hidden;
+    h300vh
 }
 
 body.active {
@@ -161,6 +162,7 @@ body.active {
     background-color: var(--deep-saffron);
     color: var(--white);
 }
+
 
 ::-webkit-scrollbar {
     width: 8px;
@@ -182,7 +184,9 @@ body.active {
   #REUSED STYLE
 \*-----------------------------------*/
 
-.container { padding-inline: 15px; }
+.container {
+    padding-inline: 15px;
+}
 
 /*-----------------------------------*\
   #HEADER
@@ -258,7 +262,9 @@ body.active {
     font-size: 20px;
 }
 
-.search-btn ion-icon { --ionicon-stroke-width: 50px; }
+.search-btn ion-icon {
+    --ionicon-stroke-width: 50px;
+}
 
 .nav-toggle-btn {
     display: grid;
@@ -273,13 +279,25 @@ body.active {
     transition: var(--transition-1);
 }
 
-.line.middle { width: 20px; }
+.line.middle {
+    width: 20px;
+}
 
-.line.bottom { margin-left: auto; }
+.line.bottom {
+    margin-left: auto;
+}
 
-.nav-toggle-btn.active .line.top { transform: translate(1px, 3px) rotate(45deg); }
-.nav-toggle-btn.active .line.middle { transform: rotate(-45deg); }
-.nav-toggle-btn.active .line.bottom { transform: translate(-1px, -3px) rotate(45deg); }
+.nav-toggle-btn.active .line.top {
+    transform: translate(1px, 3px) rotate(45deg);
+}
+
+.nav-toggle-btn.active .line.middle {
+    transform: rotate(-45deg);
+}
+
+.nav-toggle-btn.active .line.bottom {
+    transform: translate(-1px, -3px) rotate(45deg);
+}
 
 .navbar {
     position: absolute;
@@ -301,9 +319,13 @@ body.active {
     visibility: visible;
 }
 
-.navbar-list { margin-block: 10px; }
+.navbar-list {
+    margin-block: 10px;
+}
 
-.nav-item:not(:last-child) { border-block-end: 1px solid hsla(0, 0%, 0%, 0.04); }
+.nav-item:not(:last-child) {
+    border-block-end: 1px solid hsla(0, 0%, 0%, 0.04);
+}
 
 .navbar-link {
     color: var(--rich-black-fogra-29);
@@ -314,6 +336,8 @@ body.active {
     transition: var(--transition-1);
 }
 
-.navbar-link:is(:hover, :focus) { color: var(--dark-orange); }
+.navbar-link:is(:hover, :focus) {
+    color: var(--dark-orange);
+}
 
 .
