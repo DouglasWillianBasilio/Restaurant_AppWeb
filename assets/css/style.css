@@ -147,7 +147,6 @@ body {
     font-size: 1.6rem;
     line-height: 1.6;
     overflow-x: hidden;
-    h300vh
 }
 
 body.active {
@@ -340,4 +339,60 @@ body.active {
     color: var(--dark-orange);
 }
 
-.
+
+
+/*-----------------------------------*\
+  #SEARCH BOX
+\*-----------------------------------*/
+
+.search-container {
+    position: fixed;
+    top: -60p;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    background-color: var(--black_95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 15px;
+    z-index: 5;
+    visibility: hidden;
+    opacity: 0;
+    transition: var(--transition-2);
+}
+
+.search-container.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(50%);
+}
+
+.search-box {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+}
+
+.search-input {
+    color: var(--gainsboro);
+    font-size: 3rem;
+    padding: 20px 15px;
+    padding-inline-end: 70px;
+}
+
+.search-input::placeholder { color: var(--spanish-gray) }
+
+.search-input::-webkit-search-cancel-button { display: none; }
+
+.search-submit {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    color: var(--onyx);
+    font-size: 4rem;
+    transition: var(--transition-1);
+}
+
+.search-submit:is(:hover, :focus) { color: var(--gainsboro); }
